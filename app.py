@@ -11,7 +11,7 @@ session = requests.Session()
 
 @st.cache_data(show_spinner=False)
 def fetch_poster(movie_id):
-    url = 'https://api.themoviedb.org/3/movie/{}?api_key=6f80a16a8388e1f7cecca2feaae396ef&language=en-US'.format(movie_id)
+    url = 'https://api.themoviedb.org/3/movie/{}?api_key=API KEY'.format(movie_id)
 
     for attempt in range(3):
         try:
