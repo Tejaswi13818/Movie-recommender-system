@@ -11,7 +11,7 @@ session = requests.Session()
 
 @st.cache_data(show_spinner=False)
 def fetch_poster(movie_id):
-    url = 'https://api.themoviedb.org/3/movie/{}?api_key=API KEY'.format(movie_id,st.secrets["TMDB_API_KEY"])
+    url = 'https://api.themoviedb.org/3/movie/{}?api_key={}'.format(movie_id,st.secrets["TMDB_API_KEY"])
 
     for attempt in range(3):
         try:
